@@ -1,9 +1,11 @@
+package com.foo
+
 import org.apache.flink.streaming.api.scala.StreamExecutionEnvironment
 
 object Streamcount {
   def main(args: Array[String]): Unit = {
     val env = StreamExecutionEnvironment.getExecutionEnvironment
-
+    env.setParallelism(2);
     import org.apache.flink.api.scala._
     val socketext = env.socketTextStream("192.168.245.151",1086)
     val streamtest=socketext.flatMap(_.split(" "))
