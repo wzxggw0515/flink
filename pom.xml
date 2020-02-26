@@ -46,6 +46,7 @@ http://maven.apache.org/xsd/maven-4.0.0.xsd">
             <artifactId>flink-statebackend-rocksdb_2.11</artifactId>
             <version>1.7.2</version>
         </dependency>
+
     </dependencies>
 
     <build>
